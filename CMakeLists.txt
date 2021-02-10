@@ -23,10 +23,10 @@ catkin_package(CATKIN_DEPENDS message_runtime)
 include_directories(include ${catkin_INCLUDE_DIRS})
 
 
-add_executable(talker talker.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
-add_dependencies(talker lidar_sensor_node)
+add_executable(laser_scan_publisher src/laser_scan_.cpp)
+target_link_libraries(laser_scan_publisher ${catkin_LIBRARIES})
+add_dependencies(laser_scan_publisher )
 
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES})
-add_dependencies(listener lidar_sensor_node_listener)
+add_executable(point_cloud_publisher src/point_cloud_.cpp)
+target_link_libraries(point_cloud_publisher ${catkin_LIBRARIES})
+add_dependencies(point_cloud_publisher )

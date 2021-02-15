@@ -10,7 +10,7 @@ int main(int argc, char **argv) {
   unsigned int num_readings = 100;
   double laser_frequency = 40;
   double ranges[num_readings];
-  double intensities[num_readings];
+  double intensities[num_readings]; 
 
   int count = 0;
   ros::Rate r(1.0);

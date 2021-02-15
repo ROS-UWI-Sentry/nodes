@@ -13,11 +13,13 @@ add_service_files(FILES laser_scan.srv)
 
 add_message_files(FILES PointCloud.msg)
 ## Generate added messages and services
-generate_messages(DEPENDENCIES sensor_msgs)
+generate_messages(DEPENDENCIES std_msgs)
 
 
 ## Declare a catkin package
-catkin_package(CATKIN_DEPENDS message_runtime)
+catkin_package(
+	include_directories include
+	CATKIN_DEPENDS message_runtime)
 
 
 ## Build talker and listener

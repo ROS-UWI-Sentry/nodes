@@ -9,8 +9,8 @@ void counterCallback(const sensor_msgs::LaserScan::ConstPtr& msg){
 int main(int argc, char **argv)
 {
     ros::init(argc, argv, "laser_listener");
-    ros::NodeHandle n;
-    ros::Subscriber sub = n.subscribe("chatter", 1000, chatterCallback);
+    ros::NodeHandle nh;
+    ros::Subscriber sub = nh.subscribe("/scan", 1000, counterCallback);
     ros::spin();
     return 0;
 }

@@ -9,7 +9,7 @@ find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs message_generation
 
 ## Declare ROS messages and services
 add_message_files(FILES LaserScan.msg)
-add_service_files(FILES laser_scan.srv)
+add_service_files(FILES GetMap.srv)
 
 #add_message_files(FILES PointCloud.msg)
 ## Generate added messages and services
@@ -36,3 +36,6 @@ target_link_libraries(point_cloud_file ${catkin_LIBRARIES})
 
 add_executable(laser_scan_listener src/laser_scan_listener.cpp)
 target_link_libraries(laser_scan_listener ${catkin_LIBRARIES})
+
+add_executable(odom_data src/odom_data.cpp)
+target_link_libraries(odom_data ${catkin_LIBRARIES})

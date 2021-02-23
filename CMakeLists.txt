@@ -5,7 +5,8 @@ project(comms)
 add_compile_options(-std=c++11)
 
 ## Find catkin and any catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs message_generation)
+find_package(catkin REQUIRED COMPONENTS roscpp rospy std_msgs message_generation
+geometry_msgs tf)
 
 ## Declare ROS messages and services
 add_message_files(FILES LaserScan.msg)
